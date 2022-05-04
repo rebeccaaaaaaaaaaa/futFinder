@@ -19,7 +19,7 @@ export function CardGrid() {
         <Card nomeTime="Palmeiras" pais="Brasil" estado="SP" escudo={PalmeirasEscudo} />
         <Card nomeTime="Santos" pais="Brasil" estado="SP" escudo={SantosEscudo} />
         <Card nomeTime="Palmeiras" pais="Brasil" estado="SP" escudo={PalmeirasEscudo} />
-        <Card nomeTime="Santos" pais="Brasil" estado="SP" escudo={SantosEscudo} />
+
     </Grid>
   )
 }
