@@ -1,6 +1,7 @@
-import { Grid, GridItem, Box, Image, Heading  } from "@chakra-ui/react";
+import { Grid, GridItem, Box, Image, Heading } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-interface TimesProps{
+interface TimesProps {
   nomeTime: string;
   pais: string;
   estado: string;
@@ -9,29 +10,38 @@ interface TimesProps{
 
 export function Card(props: TimesProps) {
   return (
-    <div style={{width: '80%', margin: 'auto', paddingTop: '60px'}}>
+    <div style={{ width: "80%", margin: "auto", paddingTop: "60px" }}>
+      <Link to="/details">
         <GridItem w="100%">
-          <Box 
-            display="flex" 
-            gap={5} w="100%" 
-            alignItems="center" 
+          <Box
+            display="flex"
+            gap={5}
+            w="100%"
+            alignItems="center"
             justifyContent="center"
             shadow="0px 6px 9px #00000016"
             borderRadius="10px"
             padding={15}
             cursor="pointer"
             _hover={{
-              transform: 'scale(1.02)',
-              transition: 'all 0.3s ease-in-out'
+              transform: "scale(1.02)",
+              transition: "all 0.3s ease-in-out",
             }}
           >
             <Image src={props.escudo} alt={"Escudo do " + props.nomeTime} />
-             <div className="boxText">
-              <Heading as='h1' size='md'> {props.nomeTime} </Heading>
-              <p> {props.pais} - {props.estado} </p>
-             </div>
+            <div className="boxText">
+              <Heading as="h1" size="md">
+                {" "}
+                {props.nomeTime}{" "}
+              </Heading>
+              <p>
+                {" "}
+                {props.pais} - {props.estado}{" "}
+              </p>
+            </div>
           </Box>
         </GridItem>
+      </Link>
     </div>
   );
 }
