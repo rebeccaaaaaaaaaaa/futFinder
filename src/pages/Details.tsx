@@ -1,6 +1,12 @@
+import { BackButton } from "../components/BackButton";
+import { Header } from "../components/Header";
+
 export function Details() {
   return (
-    <div>Details</div>
+    <div>
+      <Header />
+      <BackButton />
+    </div>
   )
 }
 
