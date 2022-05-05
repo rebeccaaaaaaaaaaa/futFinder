@@ -1,36 +1,44 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
+
 
 interface Time {
-    escudo: string;
-    nome: string;
-    estado: string;
-    pais: string;
-    mascote: string;
-    titulos: {},
+  id: number;
+  escudo: string;
+  nome: string;
+  estado: string;
+  pais: string;
+  mascote: string;
+  titulos: {};
 }
 
-interface TimesProps{
-    children: ReactNode;
+interface TimesProps {
+  children: ReactNode;
 }
 
 interface TimesPropsContextData {
-
+  times: Time[];
 }
 
-export const TimeContext = createContext<TimesPropsContextData>({} as TimesPropsContextData);
+export const TimeContext = createContext<TimesPropsContextData>(
+  {} as TimesPropsContextData
+);
 
-export function TimeProvider ({ children }: TimesProps) {
+export function TimeProvider({ children }: TimesProps) {
+  const [times, setTimes] = useState<Time[]>([]);
 
-    useEffect(() => {
-        console.log('Carregando times...');
-    }, []);
-        
+  useEffect(() => {
+    console.log("Contexto funcionando");
+  }, []);
 
-    return (
-        <TimeContext.Provider value={{}}>
-            {children}
-        </TimeContext.Provider>
-    )
-
+  return <TimeContext.Provider value={{
+    times,
+  }}>
+      {children}
+  </TimeContext.Provider>;
 }
-

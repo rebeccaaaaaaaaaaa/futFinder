@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { TimeContext } from "../contexts/globalContext";
 
-export function useTransactions () {
+export function useGlobalContext () {
     const context = useContext(TimeContext);
     return context;
 }
