@@ -45,7 +45,7 @@ export function InsideInfo() {
           </Box>
         </GridItem>
 
-        <GridItem display="flex" alignItems="center" flexDirection="column">
+        <GridItem display="flex" alignItems="center" flexDirection="column" marginTop={15}>
           <img src={Mascote} alt="Mascote" />
         </GridItem>
       </Grid>

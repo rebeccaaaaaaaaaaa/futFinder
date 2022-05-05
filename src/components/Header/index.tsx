@@ -7,13 +7,13 @@ export function Header() {
   return (
     <Box 
         w="100vw" 
-        h="390px" 
+        h="250px" 
         p={4} 
         color="white" 
         backgroundImage={BgHeader} 
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
-        backgroundPosition="center"
+        backgroundPosition="bottom"
         display="flex"
         justifyContent="center"
         alignItems="center"
@@ -22,7 +22,7 @@ export function Header() {
         src={Player} 
         alt='player'
         width="105px"
-        marginTop={350}
+        marginTop={230}
      />
     </Box>
   );
