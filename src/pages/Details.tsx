@@ -7,7 +7,7 @@ export function Details() {
     <div>
       <Header />
       <BackButton />
-
+      
       <InsideInfo />
     </div>
   )
