@@ -2,10 +2,17 @@ import { Grid, GridItem, Box, Image, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 interface TimesProps {
+  id: number;
   nomeTime: string;
   pais: string;
   estado: string;
   escudo: string;
+  mascote: string;
+  titulos: {
+    copa: number;
+    copa_do_mundo: number;
+    copa_da_fifa: number;
+  }
 }
 
 export function Card(props: TimesProps) {
@@ -28,9 +35,9 @@ export function Card(props: TimesProps) {
               transition: "all 0.3s ease-in-out",
             }}
           >
-            <Image src={props.escudo} alt={"Escudo do " + props.nomeTime} />
+            <Image src={props.escudo} alt={"Escudo do " + props.nomeTime} width="55px" height="55px" objectFit="contain"/>
             <div className="boxText">
-              <Heading as="h1" size="md">
+              <Heading as="h1" size="14px">
                 {" "}
                 {props.nomeTime}{" "}
               </Heading>
